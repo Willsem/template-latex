@@ -1,8 +1,8 @@
 \titleformat
 {\section} % command
 {\bfseries\Large} % format
-{}
-{-1cm}
+{\thesection}
+{0.2cm}
 {
     \centering
 }
@@ -10,10 +10,12 @@
 \titleformat
 {\subsection} % command
 {\bfseries\large} % format
-{}
-{-1cm}
+{\thesubsection}
+{0.2cm}
 {
     \centering
 }
 
 \titlespacing*{\section}{0cm}{0cm}{0cm}[0cm]
+
+\newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
