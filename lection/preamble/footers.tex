@@ -1,0 +1,23 @@
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhead{}
+\let\Sectionmark\sectionmark
+\def\sectionmark#1{\def\Sectionname{#1}\Sectionmark{#1}}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\renewcommand{\@oddhead}{\it \vbox{\hbox to \textwidth
+    {\rm{\Sectionname \hfill \thepage}\strut}\hrule}}
+\makeatother
+    \fancyhf{}
+
+\fancyfoot{}
+
+\fancypagestyle{tableofcontents}
+{
+    \fancyhead{}
+    \fancyhead[L]{Содержание}
+    \fancyhead[R]{\thepage}
+    \fancyfoot{}
+}
